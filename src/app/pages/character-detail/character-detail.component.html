@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-12 d-flex justify-content-center">
+    <img [src]="itemSelected?.image" class="img-thumbnail" alt="...">
+  </div>
+  <div class="col-12 d-flex justify-content-center">
+    <table class="table table-striped" style="max-width: 400px;">
+      <tbody>
+        <tr>
+          <th scope="col">Name</th>
+          <td>{{itemSelected?.name}}</td>
+        </tr>
+        <tr>
+          <th scope="col">Species</th>
+          <td>{{itemSelected?.species}}</td>
+        </tr>
+        <tr>
+          <th scope="col">Gender</th>
+          <td>{{itemSelected?.gender}}</td>
+        </tr>
+        <tr>
+          <th scope="col">Location</th>
+          <td>{{itemSelected?.location?.name}}</td>
+        </tr>
+        <tr>
+          <th scope="col">Origin</th>
+          <td>{{itemSelected?.origin?.name}}</td>
+        </tr>
+        <tr>
+          <th scope="col">Status</th>
+          <td>{{itemSelected?.status}}</td>
+        </tr>
+        <tr>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="d-grid gap-2">
+  <button class="btn btn-secondary" type="button" (click)="goToBack()">Back</button>
+</div>

@@ -1,0 +1,10 @@
+<nav class="navbar navbar-dark bg-dark">
+  <form class="container-fluid justify-content-center">
+    <button class="btn btn-sm btn-outline-success me-2" type="button" (click)="redirectTo({titleList: 'Characters', catalog: 'character'})">Character</button>
+    <button class="btn btn-sm btn-outline-primary me-2" type="button" (click)="redirectTo({titleList: 'Locations', catalog: 'location'})">Locations</button>
+    <button class="btn btn-sm btn-outline-info me-2" type="button" (click)="redirectTo({titleList: 'Episodes', catalog: 'episode'})">Episodes</button>
+  </form>
+</nav>
+<div class="container mt-5">
+  <router-outlet></router-outlet>
+</div>

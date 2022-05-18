@@ -1,0 +1,20 @@
+<div class="form-floating mb-3">
+  <input type="email" #inputSearch class="form-control" id="floatingInput" placeholder="name@example.com" (keyup)="search(inputSearch.value)">
+  <label for="floatingInput">Search</label>
+</div>
+
+<table class="table table-striped" aria-describedby="Tabla">
+  <thead>
+    <tr class="text-center">
+      <th scope="col" *ngFor="let header of tableHeaders$|async">{{ header.value }}</th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr class="row-table" *ngFor="let item of listItems; index as i" (click)="selectedItem(item)">
+      <td *ngFor="let header of tableHeaders$|async; index as j">
+        <span *ngIf="!header.isImage" [id]="'item-' + i + '-' + j">{{ item[header.key] }}</span>
+        <img *ngIf="header.isImage" [src]="item[header.key]" class="img-thumbnail" alt="...">
+      </td>
+    </tr>
+  </tbody>
+</table>
